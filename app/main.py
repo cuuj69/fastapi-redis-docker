@@ -234,4 +234,5 @@ async def initialize_redis(keys: Keys):
 @app.on_event('startup')
 async def startup_event():
     keys = Keys()
+    
     await initialize_redis(keys)
